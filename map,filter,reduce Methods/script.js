@@ -72,3 +72,45 @@ console.log(depositsFor);
 // (4) [200, 450, 3000, 70]
 // script.js:47 
 // (4) [200, 450, 3000, 70]
+
+//reduce-Methods
+
+const balance=movements.reduce(function(acc,cur,i,arr){
+    console.log(`Iteration${i}:${acc}`);
+    return acc+cur;
+},0);
+
+const balance=movements.reduce(function(acc,cur,i,arr){
+    console.log(`Iteration${i}:${acc}`);
+    return acc+cur;
+},100);
+
+//using for of loop
+
+let balnce2=0;
+for(const mov of movements)balnce2+=mov;
+console.log(balnce2);
+
+//using arrow function
+const balance3=movements.reduce((acc,cur)=>acc+cur,0);
+console.log(balance3);
+
+
+//PRACties qns among this three methods
+
+// let arr=[40,50,100,99,95,90,67];
+// let above=arr.filter((val)=>{
+//     return val>90;
+// });
+// console.log(above);
+
+// let n=prompt("entre numbers");
+// let arr=[];
+// for(let i=1; i<=n; i++){
+//     arr[i-1]=i;
+// }
+// console.log(arr);
+// let newArr=arr.reduce((res,cur)=>{
+//     return res * cur;
+// });
+// console.log(newArr);
